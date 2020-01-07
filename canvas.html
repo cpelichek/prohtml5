@@ -5,15 +5,30 @@
         <title>Sample</title>
         <script type="text/javascript">
             // This function will be called once the page loads completely
-            function pageLoad() {
+            function pageLoaded() {
                 // Get a handle to the canvas object
                 var canvas = document.getElementById("testcanvas");
                 
                 // Get the 2d context for this canvas
                 var context = canvas.getContext("2d");
 
-                // Our drawng code here...
-                
+                // FILLED RECTANGLES
+                // Draw a solid square
+                context.fillRect(200, 10, 100, 100);
+                // Draw another solid square
+                context.fillRect(50, 70, 90, 30);
+
+                // STROKED RECTANGLES
+                // Draw a rectangular outline
+                context.strokeRect(110, 10, 50, 50);
+                // Draw another rectangular outline
+                context.strokeRect(30, 10, 70, 70);
+
+                // CLEARING RECTANGLES
+                // Clear a rectangle
+                context.clearRect(210, 20, 30, 20);
+                // Clear another rectangle
+                context.clearRect(260, 20, 20, 30);
             }
         </script>
     </head>
